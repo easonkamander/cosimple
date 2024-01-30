@@ -1,0 +1,10 @@
+[package]
+name = "cosimple"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+typed-index-collections = "3.1"
+derive_more = "0.99"
+chumsky = "0.9"
+minilp = "0.2"
