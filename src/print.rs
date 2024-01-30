@@ -39,15 +39,11 @@ impl<'a> Index<'a> {
     }
 
     fn print0(indx: usize) -> String {
-        const N: usize = 26;
-        const XS: [char; N] = [
-            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
-            'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-        ];
-        if indx >= N {
-            Self::print0(indx / N - 1) + &XS[indx % N].to_string()
+        let xs = Vec::from_iter('A'..='Z');
+        if indx >= xs.len() {
+            Self::print0(indx / xs.len() - 1) + &xs[indx % xs.len()].to_string()
         } else {
-            XS[indx].to_string()
+            xs[indx].to_string()
         }
     }
 
