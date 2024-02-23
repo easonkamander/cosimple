@@ -3,7 +3,7 @@ mod split;
 mod terms;
 
 pub use split::*;
-pub use terms::{Abstr, Apply, Ident, Sheaf, Term, Zone};
+pub use terms::{Sheaf, Term};
 
 impl TryFrom<Vec<u8>> for File {
     type Error = <terms::File as TryFrom<Vec<u8>>>::Error;
